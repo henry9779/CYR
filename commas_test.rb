@@ -1,7 +1,7 @@
 require './commas'
 
 RSpec.describe Commas do
-  describe 'test' do
+  describe '#set' do
 
     before do
       @commas = Commas.new
