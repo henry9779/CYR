@@ -7,7 +7,7 @@ require 'open-uri'
 # task :top <number> do
   # 撈出所有資料
   doc = Nokogiri::HTML(URI.open('https://www.alexa.com/topsites'))
-  doc.search('//*[@id="alx-content"]/div[1]/section[2]/span/span/div/div/div[2]').each do |link|
+  rs = doc.search('//*[@id="alx-content"]/div[1]/section[2]/span/span/div/div/div[2]').each do |link|
     puts link.content
   end
   # 比對使用者輸入的數字
